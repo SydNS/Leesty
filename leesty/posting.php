@@ -17,7 +17,7 @@ if (isset($_POST['subbutton'])){
     if (isset($conn)) {
         $qryresults=mysqli_query($conn,$sqlquery);
         if ($qryresults){
-            echo "Success Post";
+            echo "<script>alert('Success Post')</script>";
             $sqlqueryafterposting = "SELECT * FROM posts";
             $qryresults=mysqli_query($conn,$sqlqueryafterposting);
 
