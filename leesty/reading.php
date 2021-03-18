@@ -10,12 +10,12 @@ if (isset($conn)) {
 
     if (mysqli_num_rows($qryresults) > 0) {
         while ($row = mysqli_fetch_assoc($qryresults)) {
+//
+//            $rid=$row['id'];
+//            $sqlquerydeletingpost = "DELETE FROM posts WHERE id='$rid'";
+//            $qrydelete = mysqli_query($conn, $sqlquerydeletingpost);
 
-            $rid=$row['id'];
-            $sqlquerydeletingpost = "DELETE FROM posts WHERE id='$rid'";
-            $qrydelete = mysqli_query($conn, $sqlquerydeletingpost);
-
-            echo "<p> id is " . $row['id'] . " title is " . $row['title'] . " details is " . $row['details'] . "date poseted is " . $row['date'] . " <button>Del<?php $qrydelete;?></button><br> </p>";
+            echo "<p> id is " . $row['id'] . " title is " . $row['title'] . " details is " . $row['details'] . "date poseted is " . $row['date'] . " <button>Del</button><br> </p>";
         }
     }
 
