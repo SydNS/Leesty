@@ -1,5 +1,5 @@
 <?php
-$dbname="";
+$dbname="leesty";
 $dbuser="root";
 $dbpass="";
 $dblink="localhost";
