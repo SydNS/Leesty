@@ -11,7 +11,7 @@ $sqlquery = "INSERT INTO posts('id', 'title', 'details', 'author', 'date')  VALU
 if (isset($conn)) {
     $qryresults=mysqli_query($conn,$sqlquery);
     if ($qryresults){
-        echo "Success Pos"
+        echo "Success Post";
     }
 }
 ?>
