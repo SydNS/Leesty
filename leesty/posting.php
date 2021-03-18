@@ -18,7 +18,14 @@ if (isset($_POST['subbutton'])){
         $qryresults=mysqli_query($conn,$sqlquery);
         if ($qryresults){
             echo "Success Post";
-            $sqlquery = "SELECT * FROM posts";
+            $sqlqueryafterposting = "SELECT * FROM posts";
+            $qryresults=mysqli_query($conn,$sqlqueryafterposting);
+
+            if (mysqli_num_rows($qryresults)>0){
+                while ($row=mysqli_fetch_assoc($qryresults)){
+                    echo "<p> id is " .$row['details'] . "<br> </p>";
+                }
+            }
 
 
 
