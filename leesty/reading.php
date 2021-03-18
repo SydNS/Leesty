@@ -1,14 +1,18 @@
 <?php
+
+include '../includes/dbconn.php';
+
 if (isset($conn)) {
-    $qryresults=mysqli_query($conn,$sqlquery);
-    if ($qryresults){
-        echo "Success Post";
+
         $sqlqueryafterposting = "SELECT * FROM posts";
         $qryresults=mysqli_query($conn,$sqlqueryafterposting);
 
         if (mysqli_num_rows($qryresults)>0){
             while ($row=mysqli_fetch_assoc($qryresults)){
-                echo "<p> id is " .$row['details'] . "<br> </p>";
+
+
+
+                echo "<p> id is " .$row['id'] . " title is " .$row['title'] . " details is " .$row['details'] . "date poseted is " .$row['date'] . " <br> </p>";
             }
         }
 
@@ -16,6 +20,6 @@ if (isset($conn)) {
 
     }else{
         echo "Nothing is Post ".mysqli_error($conn);
-    }
+
 
 }
