@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>rousel</title>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
 
-    <!-- Compiled and minified JavaScript -->
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
     <style>
-        .section{
-            position: relative;
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+
         }
     </style>
 </head>
+
 <body>
-
-
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="Quotefancy-941-3840x2160.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="Quotefancy-1608-3840x2160.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="Quotefancy-1913-3840x2160.jpg"></a>
-
-
-
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(Quotefancy-1913-3840x2160.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(Quotefancy-1608-3840x2160.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(Quotefancy-1913-3840x2160.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(Quotefancy-1608-3840x2160.jpg)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+<!-- Swiper JS -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<!-- Initialize Swiper -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel');
-        var instance = M.Carousel.init(elems, options);
-        instance.next();
-        instance.next(3); // Move next n times.
-
-        instance.prev();
-        instance.prev(3); // Move previous n times.
-
-
-        instance.set();
-        instance.set(3);
-
-        instance.destroy();
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
     });
-
-    // $(document).ready(function(){
-    //     $('.carousel').carousel();
-    // });
-
-
-
-</body>
 </script>
+</body>
+
 </html>
