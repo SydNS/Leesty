@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rousel</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <style>
+        .section{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="Quotefancy-941-3840x2160.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="Quotefancy-1608-3840x2160.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="Quotefancy-1913-3840x2160.jpg"></a>
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instance = M.Carousel.init(elems, options);
+        instance.next();
+        instance.next(3); // Move next n times.
+
+        instance.prev();
+        instance.prev(3); // Move previous n times.
+
+
+        instance.set();
+        instance.set(3);
+
+        instance.destroy();
+    });
+
+    // $(document).ready(function(){
+    //     $('.carousel').carousel();
+    // });
+
+
+
+</body>
+</script>
+</html>
