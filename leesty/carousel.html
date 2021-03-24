@@ -2,17 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Swiper demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- Demo styles -->
     <style>
         body {
             background: #fff;
@@ -32,8 +24,8 @@
         .swiper-slide {
             background-position: center;
             background-size: cover;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 350px;
 
         }
     </style>
@@ -43,10 +35,27 @@
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image:url(Quotefancy-1913-3840x2160.jpg)"></div>
-        <div class="swiper-slide" style="background-image:url(Quotefancy-1608-3840x2160.jpg)"></div>
-        <div class="swiper-slide" style="background-image:url(Quotefancy-1913-3840x2160.jpg)"></div>
-        <div class="swiper-slide" style="background-image:url(Quotefancy-1608-3840x2160.jpg)"></div>
+
+        <div class="swiper-slide" style="background-image:url()"></div>
+
+<!--        <img class="swiper-slide u-back-image u-expanded u-back-image-3" src="images/CAROUSEL11.jpg">-->
+<!--        <img class="swiper-slide u-back-image u-expanded u-back-image-3" src="images/CAROUSEL11.jpg">-->
+<!--        <img class="swiper-slide u-back-image u-expanded u-back-image-3" src="images/CAROUSEL11.jpg">-->
+        <div class="swiper-slide" style="background-image:url(images/CAROUSEL1.jpg)">
+            <div class="u-container-style u-grey-5 u-group u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h1 class="u-align-center u-text u-text-1">I<span style="font-size: 1.5rem;"></span>DEAS
+                    </h1>
+                    <p class="u-align-center u-custom-font u-font-montserrat u-text u-text-2">Mug Holder With A Knob
+                        Decor | Mug Tree | Coffee Bar | Coffee Station</p>
+                    <a href=""
+                       class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-color-scheme-summer-time u-color-style-multicolor-1 u-custom-font u-font-source-sans-pro u-none u-text-body-color u-btn-1">READ
+                        MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(images/CAROUSEL11.jpg)"></div>
+
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -65,7 +74,7 @@
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 50,
+            rotate: -30,
             stretch: 0,
             depth: 100,
             modifier: 1,
